@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech work-shop </title>
+</head>
+<body>
+    <nav>
+        <a href="INDEX.html"><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"></a>
+       <div align="right" > 
+            <a > Service</a>&nbsp;
+            <a > About us </a>&nbsp;
+            <a  >Contact </a>&nbsp;
+            <a href="notification.html">
+               <img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="Notifications" width="20" height="20"></a> 
+            <hr>
+       </div>
+    </nav>
+   
+        <br><br><br>
+    <center>
+        <h1>Mon Profil</h1>
+        <hr width="50%">
+    </center>
+
+   
+    <center>
+    <table border="0" cellpadding="10">
+        <tr>
+            <td>
+
+                <h2>Informations du compte</h2>
+
+                <form action="update_profile.php" method="post" enctype="multipart/form-data">
+
+                   
+                    <label for="fullname"><b>Nom complet :</b></label><br>
+                    <input type="text" id="fullname" name="fullname" value="Nom de l'utilisateur" size="40"><br><br>
+
+                 
+                    <label for="email"><b>Adresse Email :</b></label><br>
+                    <input type="email" id="email" name="email" value="exemple@email.com" size="40"><br><br>
+
+                 
+                    <label for="current_password"><b>Mot de passe actuel :</b></label><br>
+                    <input type="password" id="current_password" name="current_password" size="40"><br><br>
+
+                   
+                    <label for="new_password"><b>Nouveau mot de passe :</b></label><br>
+                    <input type="password" id="new_password" name="new_password" size="40"><br><br>
+
+                    <hr>
+
+                    
+                    <center>
+                        <h3>Photo de profil :</h3>
+                        <img src="profile_picture.jpg" alt="Photo de profil" width="150"><br><br>
+                        <input type="file" name="new_profile_picture"><br><br>
+                    </center>
+
+                    <hr>
+
+                   
+                    <center>
+                        <button type="submit">Enregistrer les modifications</button>
+                    </center>
+
+                </form>
+
+            </td>
+        </tr>
+    </table>
+    </center>
+
+    <hr width="60%">
+
+
+    <center>
+        <a href="INDEX.html">Accueil</a> |
+        <a href="logout.html">Déconnexion</a>
+    </center>
+    
+    <br><br>
+    <hr size="3" color="0">
+
+    <footer>
+        <strong> <center>@ALL RIGHTS RESERVED </center> </strong>
+    </footer>
+    
+
+</body>
+</html>
