@@ -4,30 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up – Tech Workshop</title>
-  <script>
-    function checkPasswords() {
-      var pass = document.getElementById("password").value;
-      var confirm = document.getElementById("confirm").value;
-      var email = document.getElementById("email").value;
-
-      if (email === "" || pass === "" || confirm === "") {
-        alert("Please fill in all fields.");
-        return false;
-      }
-      if (pass !== confirm) {
-        alert("Passwords do not match! Please try again.");
-        return false;
-      }
-
-     
-      localStorage.setItem("userEmail", email);
-      localStorage.setItem("userPassword", pass);
-
-      alert("Account created successfully! You can now log in.");
-      window.location.href = "INDEX.html"; 
-      return true;
-    }
-  </script>
 </head>
 <body>
   <header>
@@ -37,9 +13,9 @@
           <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"></a>
         </td>
         <td align="right">
-          <a href="#">Service</a> |
-          <a href="#">About us</a> |
-          <a href="#">Contact </a>|
+          <a href="index.html#Servixe">Service</a> |
+          <a href="index.html#About">About us</a> |
+          <a href="index.html#Contact">Contact </a>|
           <a href="notification.html">
                <img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="Notifications" width="20" height="20"></a> 
         </td>

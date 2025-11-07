@@ -4,28 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login – Tech Workshop</title>
-  <script>
-    function loginUser() {
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-
-      
-      var savedEmail = localStorage.getItem("userEmail");
-      var savedPassword = localStorage.getItem("userPassword");
-
-      if (email === "" || password === "") {
-        alert("Please fill in both fields.");
-        return false;
-      }
-
-      if (email === savedEmail && password === savedPassword) {
-        alert("Login successful! Welcome back.");
-        window.location.href = "INDEX.html"; 
-      } else {
-        alert("Incorrect email or password. Please try again.");
-      }
-    }
-  </script>
 </head>
 <body>
   <center>
@@ -48,7 +26,7 @@
       </tr>
     </table>
 
-    <p>Don't have an account? <a href="CREAT ACCONT.HTML">Register here</a>.</p>
+    <p>Don't have an account? <a href="create_account.html">Register here</a>.</p>
   </center>
 </body>
 </html>
