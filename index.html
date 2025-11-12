@@ -1,126 +1,147 @@
-  <!DOCTYPE html>
-  
-  
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech work-shop </title>
+    <title>Tech work-shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="indexcss.css">
 </head>
 <body>
     <nav>
-       <a href="index.html"><img src=" pic_src\Ayoub_Logo-1.png" alt="logo" width="100" hight="70" /></a>
-       <div align="right" > 
-            <a  href="#Service"> Service</a>&nbsp;&nbsp;
-            <a href="#About" > About us </a>&nbsp;&nbsp;
-            <a  href="#Contact" >Contact </a>&nbsp;&nbsp;
-            <img src="pic_src\115695_magnifying glass_zoom_find_search_icon.png" alt="search" width="20" height="20" /> &nbsp;&nbsp;
-            <a href="team.html"><img src="pic_src\1167978_coding_development_code_dev_programming_icon.png" alt="team" width="20" hight="20"/></a> &nbsp;&nbsp;
-            <a href="notification.html"><img src="pic_src\2199103_bell_alert_notification_ring_icon.png" alt="notification" width="20" hight="20" /></a>
-            &nbsp;&nbsp;
-            <a href="create_account.html"> <img src="pic_src\7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" width="20" hight="20" /></a>
-            <hr size="3" color="0">
-       </div>
+        <div class="nav-logo">
+            <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo" /></a>
+        </div>
+        <div class="nav-links">
+            <a href="#Service">Service</a>
+            <a href="#About">About us</a>
+            <a href="#Contact">Contact</a>
+            <div class="nav-icons">
+                <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search" />
+                <a href="team.html"><img src="pic_src/1167978_coding_development_code_dev_programming_icon.png" alt="team"/></a>
+                <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification" /></a>
+                <a href="create_account.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" /></a>
+            </div>
+        </div>
     </nav>
+
     <article>
-        <br><br><br>
-        <section>
-          <img src="pic_src\main_pic.png" alt="image couldn't load " width="350" height="300" align="right" />
-          <h1>
-             &nbsp;&nbsp; UNLOCK YOUR <br>
-             &nbsp;&nbsp; POTENTIEL WHITH <br>
-             &nbsp;&nbsp; TECH WORKSHOP
-          </h1>
-          <h3>
-             &nbsp;&nbsp;&nbsp;&nbsp; make your fisrt step into the IT world
-          </h3>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input    onclick="window.location.href='registre.html'" type="button" name="register"  value="Register" />
+        <section class="hero">
+            <div class="hero-content">
+                <h1>UNLOCK YOUR POTENTIAL WITH TECH WORKSHOP</h1>
+                <h3>Make your first step to IT World</h3>
+                <button class="btn" onclick="window.location.href='registre.html'">Register</button>
+            </div>
+            <div class="hero-image">
+                <img src="pic_src/main_pic.png" alt="image couldn't load" />
+            </div>
         </section>
 
-        <br><br><br><br><br><br>
-        <hr size="3" color="0">
-
-        <section>
-            <br><br>
-           <h2 id="Service">Discover</h2>
-           <h2><strong>Featured Services</strong></h2>
-           
-           <table cellspacing="100" align="center">
-              <tr >
-                <td><img src="pic_src\arrowL.png" width="40" /></td>
-                <td><img src="pic_src\service_codepng.png" width="220" /><br><center><strong>Coding</strong></center></td>
-                <td><img src="pic_src\service_cdata.png" width="220" /><br><center><strong>Data</strong></center></td>
-                <td><img src="pic_src\service_aipng.png" width="220" /><br><center><strong>Artificial Intelligence</strong></center></td>
-                <td><img src="pic_src\arrowR.png" width="40" /></td>
-              </tr>
-            </table>
+        <section class="services" id="Service">
+            <h2 class="section-title">Discover</h2>
+            <h2 class="section-subtitle">Featured Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="pic_src/service_codepng.png" alt="Coding" />
+                    <h3>Coding</h3>
+                    <p>Master programming languages and development techniques</p>
+                </div>
+                <div class="service-card">
+                    <img src="pic_src/service_cdata.png" alt="Data" />
+                    <h3>Data</h3>
+                    <p>Learn data analysis, visualization and management</p>
+                </div>
+                <div class="service-card">
+                    <img src="pic_src/service_aipng.png" alt="Artificial Intelligence" />
+                    <h3>Artificial Intelligence</h3>
+                    <p>Explore the world of AI and machine learning</p>
+                </div>
+            </div>
         </section>
 
-        <hr size="3" color="0">
-        <br><br><br>
-
-        <section>
-            <img src="pic_src\About us.png" alt="This image couldn't load" width="350" height="300" align="right" />
-             <h2 id="About">&nbsp;&nbsp;About Us</h2>
-           <p>
-              <strong>Welcome to Tech Workshops, where innovation meets education.<br>
-              At Tech workshop , we are passionate about empowering individuals<br>
-              and organizations with cutting-edge technology skills through hands-on, interactive workshops. <br>
-              Our mission is to bridge the gap between technology and people,<br>
-              fostering a community of lifelong learners and tech enthusiasts.</strong>
-           </p>
-           <h2>&nbsp;&nbsp;Our mission</h2>
-           <p>
-                <strong>To deliver top-notch, practical tech training that empowers participants<br>
-               to achieve their professional and personal goals, <br>
-              and to cultivate a culture of innovation and continuous improvement.</strong>
-            </p>
-           <br> <br> <br>  
-        </section>      
-
-        <hr size="3" color="0">
-        <section>
-         <h1 align="center" >Partners</h1>
-         <table cellspacing="100" align="center" width="10%">
-            <tr >
-              <td><input type="button" id="part1" value="Coming soon"></td>
-              <td><input type="button" id="part2" value="Coming soon"></td>
-              <td><input type="button" id="part3" value="Coming soon"></td>
-              <td><input type="button" id="part4" value="Coming soon"></td>
-            </tr>
-         </table>
+        <section class="about" id="About">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p>
+                    Welcome to Tech Workshops, where innovation meets education.<br>
+                    At Tech workshop , we are passionate about empowering individuals<br>
+                    and organizations with cutting-edge technology skills through hands-on, interactive workshops. <br>
+                    Our mission is to bridge the gap between technology and people,<br>
+                    fostering a community of lifelong learners and tech enthusiasts.
+                </p>
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>
+                        To deliver top-notch, practical tech training that empowers participants<br>
+                        to achieve their professional and personal goals, <br>
+                        and to cultivate a culture of innovation and continuous improvement.
+                    </p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="pic_src/About us.png" alt="This image couldn't load" />
+            </div>
         </section>
 
-        <hr size="3" color="0" width="80%">
+        <section class="partners">
+            <h1 class="section-title">Partners</h1>
+            <div class="partners-container">
+                <div class="partner-card">Coming soon</div>
+                <div class="partner-card">Coming soon</div>
+                <div class="partner-card">Coming soon</div>
+                <div class="partner-card">Coming soon</div>
+            </div>
+        </section>
 
-        <section>
-          <table align="center" width="80%" >
-            <tr>
-              <td align="left">
-                <br>
-                <h1 id="Contact">Contact Us</h1>
-                <input type="text" id="Name" placeholder="Name" /><br><br>
-                <input type="email" id="email" placeholder="email" /><br><br>
-               <textarea placeholder="Message"></textarea><br><br>
-               <input type="button" id="sumbit" value="Sumbit"/>
-              </td >
-              <td align="right"><br><img src="pic_src\Socials.png" alt="This inage couldn't load" width="250" align="right"/></td>
-            </tr>
-
-          </table>
-          <br><br><br>
-        </section>   
+        <section class="contact" id="Contact">
+            <div class="contact-form">
+                <h1 class="section-title">Contact Us</h1>
+                <div class="form-group">
+                    <input type="text" id="Name" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message"></textarea>
+                </div>
+                <button class="btn">Submit</button>
+            </div>
+            
+            <div class="social-section">
+                <h3>Follow Us</h3>
+                <!-- Icônes sociales en grille 2x2 -->
+                <div class="social-grid">
+                    <a href="https://facebook.com" target="_blank" class="social-card">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-card">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-card">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://t.me/yourchannel" target="_blank" class="social-card">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 
-    <br><br>
-    <hr size="3" color="0">
-
     <footer>
-      <strong> <center>@ALL RIGHTS RESERVED </center> </strong>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo" /></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Tech Workshop. All rights reserved.</p>
+        </div>
     </footer>
-   
-   
-    
 </body>
 </html>
-
