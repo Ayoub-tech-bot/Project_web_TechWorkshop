@@ -3,91 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech work-shop </title>
+    <title>Tech work-shop - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="profilecss.css">
 </head>
 <body>
     <nav>
-        <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"></a>
-       <div align="right" > 
-            <a href="index.html#Servixe">Service</a> |&nbsp;&nbsp;
-            <a href="index.html#About">About us</a> |&nbsp;&nbsp;
-            <a href="index.html#Contact">Contact </a>|&nbsp;&nbsp;
-            <a href="notification.html">
-               <img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="Notifications" width="20" height="20"></a> 
-            <hr>
-       </div>
+        <div class="nav-logo">
+            <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#Service">Service</a>
+            <a href="index.html#About">About us</a>
+            <a href="index.html#Contact">Contact</a>
+            <div class="nav-icons">
+                <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search">
+                <a href="team.html"><img src="pic_src/1167978_coding_development_code_dev_programming_icon.png" alt="team"></a>
+                <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification"></a>
+                <a href="create_account.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile"></a>
+            </div>
+        </div>
     </nav>
-   
-        <br><br><br>
-    <center>
-        <h1>Mon Profil</h1>
-        <hr width="50%">
-    </center>
 
-   
-    <center>
-    <table border="0" cellpadding="10">
-        <tr>
-            <td>
+    <article>
+        <section class="profile-header">
+            <div class="profile-cover">
+                <div class="cover-image"></div>
+                <div class="profile-main">
+                    <div class="profile-avatar">
+                        <div class="empty-avatar">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="edit-photo-btn" onclick="document.getElementById('avatarInput').click()">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <button class="delete-avatar-btn" onclick="deleteAvatar()">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <input type="file" id="avatarInput" accept="image/*" style="display: none">
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="profileName">AHMED</h1>
+                        <p class="profile-title" id="profileTitle">Full Stack Developer</p>
+                        <p class="profile-location" id="profileLocation">
+                            <i class="fas fa-map-marker-alt"></i> Casablanca, Morocco
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <h2>Informations du compte</h2>
+        <section class="profile-content">
+            <div class="profile-sidebar">
+                <div class="sidebar-card">
+                    <h3>Account Settings</h3>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" value="AHMED">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" value="ahmed.123@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="phone" value="+212 6 12 34 56 78">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="location" value="Casablanca, Morocco">
+                    </div>
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" id="jobTitle" value="Full Stack Developer">
+                    </div>
+                    <div class="password-section">
+                        <h4>Change Password</h4>
+                        <div class="form-group">
+                            <input type="password" id="newPassword" placeholder="New Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <button class="btn save-btn" onclick="saveAllChanges()">Save All Changes</button>
+                </div>
+            </div>
 
-                <form action="update_profile.php" method="post" enctype="multipart/form-data">
+            <div class="profile-main-content">
+                <div class="progress-section">
+                    <h2>My Progress</h2>
+                    <div class="progress-stats">
+                        <div class="progress-card">
+                            <div class="stat-number">11</div>
+                            <div class="stat-label">Courses Completed</div>
+                        </div>
+                        <div class="progress-card">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Projects Done</div>
+                        </div>
+                        <div class="progress-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
 
-                   
-                    <label for="fullname"><b>Nom complet :</b></label><br>
-                    <input type="text" id="fullname" name="fullname" value="Nom de l'utilisateur" size="40"><br><br>
-
-                 
-                    <label for="email"><b>Adresse Email :</b></label><br>
-                    <input type="email" id="email" name="email" value="exemple@email.com" size="40"><br><br>
-
-                 
-                    <label for="current_password"><b>Mot de passe actuel :</b></label><br>
-                    <input type="password" id="current_password" name="current_password" size="40"><br><br>
-
-                   
-                    <label for="new_password"><b>Nouveau mot de passe :</b></label><br>
-                    <input type="password" id="new_password" name="new_password" size="40"><br><br>
-
-                    <hr>
-
-                    
-                    <center>
-                        <h3>Photo de profil :</h3>
-                        <img src="profile_picture.jpg" alt="Photo de profil" width="150"><br><br>
-                        <input type="file" name="new_profile_picture"><br><br>
-                    </center>
-
-                    <hr>
-
-                   
-                    <center>
-                        <button type="submit">Enregistrer les modifications</button>
-                    </center>
-
-                </form>
-
-            </td>
-        </tr>
-    </table>
-    </center>
-
-    <hr width="60%">
-
-
-    <center>
-        <a href="index.html">Accueil</a> |
-        <a href="logout.html">Déconnexion</a>
-    </center>
-    
-    <br><br>
-    <hr size="3" color="0">
+                    <div class="languages-section">
+                        <h3>Languages Mastery</h3>
+                        <div class="language-item">
+                            <span class="language-name">JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="percentage">90%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">Python</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">HTML/CSS</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="percentage">95%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">Java</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">PHP</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span class="percentage">65%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 
     <footer>
-        <strong> <center>@ALL RIGHTS RESERVED </center> </strong>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Tech Workshop. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-    
 
+    <script src="profiljs.js"></script>
 </body>
 </html>
