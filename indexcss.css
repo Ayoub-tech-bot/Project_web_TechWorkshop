@@ -9,7 +9,6 @@
     --white: #ffffff;
 }
 
-/* Styles généraux */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,6 @@ a:hover {
     color: var(--primary-red);
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -87,7 +85,6 @@ nav {
     transform: scale(1.1);
 }
 
-/* Sections communes */
 section {
     padding: 40px 5%;
 }
@@ -117,7 +114,6 @@ section {
     max-width: 600px;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
@@ -164,7 +160,6 @@ section {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Boutons */
 .btn {
     display: inline-block;
     padding: 10px 25px;
@@ -184,7 +179,6 @@ section {
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
 }
 
-/* Services Section - Images plus grandes */
 .services {
     text-align: center;
     background-color: var(--light-gray);
@@ -196,9 +190,8 @@ section {
     justify-content: center;
     gap: 40px;
     margin-top: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
-
 .service-card {
     background: var(--white);
     border-radius: 20px;
@@ -232,8 +225,42 @@ section {
     color: var(--almost-black);
     line-height: 1.5;
 }
+.services-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
 
-/* About Section */
+.arrow {
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    user-select: none;
+}
+
+.arrow:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0,0,0,0.05);
+}
+
+.left-arrow {
+    margin-right: 10px;
+}
+
+.right-arrow {
+    margin-left: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.03);
+}
+
+
 .about {
     display: flex;
     align-items: center;
@@ -278,7 +305,6 @@ section {
     line-height: 1.6;
 }
 
-/* Partners Section */
 .partners {
     text-align: center;
     background-color: var(--almost-black);
@@ -317,7 +343,6 @@ section {
     transform: translateY(-5px);
 }
 
-/* Contact Section */
 .contact {
     display: flex;
     gap: 40px;
@@ -355,7 +380,6 @@ section {
     resize: vertical;
 }
 
-/* Section Social */
 .social-section {
     flex: 1;
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
@@ -371,7 +395,6 @@ section {
     font-size: 1.5rem;
 }
 
-/* Grille sociale 2x2 */
 .social-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -416,7 +439,6 @@ section {
     text-align: center;
 }
 
-/* Footer */
 footer {
     background: linear-gradient(to right, var(--primary-red), var(--black));
     color: var(--white);
@@ -445,36 +467,29 @@ footer {
     text-align: center;
 }
 
-/* Animations pour toutes les images */
 img {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Animation spécifique pour les images principales */
 .hero-image img:hover,
 .about-image img:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
-
-/* Animation pour les images des services */
 .service-card img:hover {
     transform: scale(1.15);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation pour les logos */
 .nav-logo img:hover,
 .footer-logo img:hover {
     transform: scale(1.1);
 }
 
-/* Animation pour les icônes de navigation */
 .nav-icons img:hover {
     transform: scale(1.3);
 }
 
-/* Responsive */
 @media (max-width: 992px) {
     .hero, .about, .contact {
         flex-direction: column;
