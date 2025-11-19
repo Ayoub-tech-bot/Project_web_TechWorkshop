@@ -32,7 +32,11 @@ nav {
 .nav-logo {
     margin-right: auto;
 }
-
+.nav-logo img{
+    height: 40px; 
+    width: 40px;
+    border-radius: 10px;
+}
 nav a {
     color: var(--white);
     text-decoration: none;
@@ -63,6 +67,19 @@ nav img {
 
 nav img:hover {
     transform: scale(1.08);
+}
+
+.profil{
+    filter: invert(1);
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+
+}
+.profil:hover{
+    transform: scale(1.1);
+
 }
 
 h1 {
@@ -147,11 +164,111 @@ table a:hover {
 
 footer {
     margin-top: 40px;
-    background: var(--black);
+    background: linear-gradient(to right, var(--primary-red), var(--black));
     padding: 15px;
-    color: var(--white);
+    color: var(--light-gray);
     text-align: center;
     border-radius: 15px 15px 0 0;
     font-size: 0.85rem;
-    opacity: 0.9;
+}
+footer img {
+    height: 40px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+@media (max-width: 900px) {
+    nav {
+        padding: 12px 3%;
+    }
+
+    .nav-bar a {
+        margin: 0 8px;
+        font-size: 0.95rem;
+    }
+
+    table {
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        padding: 14px 2%;
+        text-align: center;
+    }
+
+    .nav-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .nav-logo img {
+        height: 38px;
+    }
+
+    .nav-bar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 20px;
+    }
+
+    table {
+        width: 95%;
+        margin-top: 18px;
+    }
+
+    table th, table td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+
+    .return-btn {
+        width: 80%;
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        padding: 10px 6px;
+    }
+
+    .nav-bar a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+
+    table {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 14px;
+    }
+
+    table th {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    table td {
+        font-size: 0.75rem;
+        padding: 7px;
+    }
+
+    .return-btn {
+        width: 92%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
 }
