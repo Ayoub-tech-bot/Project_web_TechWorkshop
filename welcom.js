@@ -5,7 +5,7 @@ const action = localStorage.getItem("action");
 
 if (welcomeTitle) {
     
-    if (action === "register") {
+    if (action === "acc_creat") {
         welcomeTitle.textContent = `Welcome ${username} to the community, you have successfully joined!`;
     } 
     else if (action === "Login") {
