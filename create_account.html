@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up – Tech Workshop</title>
-</head>
-<body>
-  <header>
-    <table width="100%">
-      <tr>
-        <td>
-          <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"></a>
-        </td>
-        <td align="right">
-          <a href="index.html#Servixe">Service</a> |
-          <a href="index.html#About">About us</a> |
-          <a href="index.html#Contact">Contact </a>|
-          <a href="notification.html">
-               <img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="Notifications" width="20" height="20"></a> 
-        </td>
-      </tr>
-    </table>
-    <hr size="3" color="0">
-  </header>
-
-  <main>
-    <center>
-      <h1>Create Your Account</h1>
-      <p>Join our Tech Workshop community and start learning!</p>
-
-      <table cellpadding="5" cellspacing="0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up – Tech Workshop</title>
+  </head>
+  <body>
+    <header>
+      <table width="100%">
         <tr>
-          <td align="right"><label for="name">Full Name:</label></td>
-          <td><input type="text" id="name" name="name"></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="email">Email:</label></td>
-          <td><input type="email" id="email" name="email"></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="password">Password:</label></td>
-          <td><input type="password" id="password" name="password"></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="confirm">Confirm Password:</label></td>
-          <td><input type="password" id="confirm" name="confirm"></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input type="button" value="Create" onclick="checkPasswords()">
+          <td>
+            <a href="index.html"
+              ><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"
+            /></a>
+          </td>
+          <td align="right">
+            <a href="index.html#Servixe">Service</a> |
+            <a href="index.html#About">About us</a> |
+            <a href="index.html#Contact">Contact </a>|
+            <a href="notification.html">
+              <img
+                src="pic_src/2199103_bell_alert_notification_ring_icon.png"
+                alt="Notifications"
+                width="20"
+                height="20"
+            /></a>
           </td>
         </tr>
       </table>
+      <hr size="3" color="0" />
+    </header>
 
-      <p>Already have an account? <a href="login.html">Log in here</a></p>
-    </center>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </main>
-  <hr size="3" color="0"> 
-  <footer>
-    <strong> <center>@ALL RIGHTS RESERVED </center> </strong>
-  </footer>
-</body>
+    <main>
+      <center>
+        <h1>Create Your Account</h1>
+        <p>Join our Tech Workshop community and start learning!</p>
+
+        <div id="error"></div>
+        <form action="/create_account.html" method="get" id="FormCA">
+          
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td align="right"><label for="name">Full Name:</label></td>
+              <td><input type="text" id="name" name="name" required/></td>
+            </tr>
+            <tr>
+              <td align="right"><label for="email">Email:</label></td>
+              <td><input type="email" id="email" name="email" required /></td>
+            </tr>
+            <tr>
+              <td align="right"><label for="password">Password:</label></td>
+              <td><input type="password" id="password" name="password" required /></td>
+            </tr>
+            <tr>
+              <td align="right">
+                <label for="confirm">Confirm Password:</label>
+              </td>
+              <td><input type="password" id="confirm" name="confirm" required /></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button type="submit" id="create_acc">Create</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+      </center>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </main>
+    <hr size="3" color="0" />
+    <footer>
+      <strong> <center>@ALL RIGHTS RESERVED</center> </strong>
+    </footer>
+    <script src="create_account_sc.js"></script>
+  </body>
 </html>

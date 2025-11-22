@@ -11,23 +11,27 @@
     <h1>Welcome Back to Tech Workshop</h1><br><br><br>
     <p>Log in to your account</p>
 
-    <table cellpadding="5">
-      <tr>
-        <td align="right"><label for="email">Email:</label></td>
-        <td><input type="email" id="email" name="email" required></td>
-      </tr>
-      <tr>
-        <td align="right"><label for="password">Password:</label></td>
-        <td><input type="password" id="password" name="password" required></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="center">
-          <input type="button" value="Login" onclick="window.location.href='index.html'">
-        </td>
-      </tr>
-    </table>
-
+    <div id="erroLog"></div>
+    <form action="/login.html" method="get" id="FormLogin">
+      <table cellpadding="5">
+        <tr>
+          <td align="right"><label for="Email">Email:</label></td>
+          <td><input type="email" id="Email" name="Email" required></td>
+       </tr>
+       <tr>
+         <td align="right"><label for="password">Password:</label></td>
+         <td><input type="password" id="password" name="password" required></td>
+       </tr>
+       <tr>
+         <td colspan="2" align="center">
+           <button type="submit" id="Login_Btn">Login </button>
+         </td>
+       </tr>
+      
+      </table>
+    </form>
     <p>Don't have an account? <a href="create_account.html">Create here</a>.</p>
   </center>
+  <script src="login.js"></script>
 </body>
 </html>
