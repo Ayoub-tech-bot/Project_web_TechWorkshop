@@ -48,7 +48,6 @@ form.addEventListener('submit', (e) => {
         const username = Full_name.value.trim();
         localStorage.setItem("username", username);
         localStorage.setItem("action", "acc_creat");
-        console.log(username);
         window.location.href = "welcom.html";
 
     }
