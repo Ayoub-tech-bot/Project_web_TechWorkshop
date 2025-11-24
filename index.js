@@ -1,12 +1,3 @@
-/*const dropbtn = document.querySelector('.dropbtn');
-const dropdown = document.querySelector('.dropdown');
-dropbtn.addEventListener('click', function(e) {
-    e.stopPropagation(); 
-    dropdown.classList.toggle('active');
-});
-window.addEventListener('click', function() {
-    dropdown.classList.remove('active');
-});*/
 const dropbtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown-content');
 const notificationIcon = document.querySelector('a[href="notification.html"]');
@@ -25,7 +16,7 @@ if (dropbtn && dropdown) {
 
 function checkLoginStatus() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
-    return !!user; // Returns true if user exists, false if not
+    return !!user; 
 }
 
 function requireAuth(redirectPage) {
@@ -36,7 +27,6 @@ function requireAuth(redirectPage) {
     }
     return true;
 }
-
 if (notificationIcon) {
     notificationIcon.addEventListener('click', function(e) {
         if (!checkLoginStatus()) {
