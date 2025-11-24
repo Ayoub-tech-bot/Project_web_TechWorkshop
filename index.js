@@ -86,14 +86,18 @@ if (notificationIcon) {
                 window.location.href = 'create_account.html';
             }, 1500);
         }
+        // If logged in, naturally navigates to notification.html
     });
 }
+
+// Handle profile icon click (IMPROVED)
 if (profileIcon) {
     profileIcon.addEventListener('click', function(e) {
         if (checkLoginStatus()) {
             e.preventDefault();
             window.location.href = 'profile.html';
         }
+        // If not logged in, naturally navigates to create_account.html
     });
 }
 
@@ -115,6 +119,7 @@ function showWelcomeMessage(message) {
         </div>
     `;
     
+    // Add styles
     messageDiv.style.cssText = `
         position: fixed;
         top: 20px;
@@ -169,6 +174,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Existing dropdown functionality
 if (dropbtn && dropdown) {
     dropbtn.addEventListener('click', function(e) {
         e.stopPropagation(); 
@@ -179,11 +185,13 @@ if (dropbtn && dropdown) {
         dropdown.classList.remove('active');
     });
 }
+
+// Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
     console.log('✅ Authentication system loaded');
     updateNavigationUI();
     
-   
+    // Show welcome back message if user just logged in
     const justLoggedIn = sessionStorage.getItem('justLoggedIn');
     if (justLoggedIn && checkLoginStatus()) {
         const user = getCurrentUser();
@@ -191,6 +199,8 @@ document.addEventListener('DOMContentLoaded', function() {
         sessionStorage.removeItem('justLoggedIn');
     }
 });
+
+// Utility functions for your team
 window.auth = {
     isLoggedIn: checkLoginStatus,
     getCurrentUser: getCurrentUser,
