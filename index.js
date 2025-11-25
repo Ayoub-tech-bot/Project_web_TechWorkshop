@@ -24,7 +24,7 @@ function setupNavigation() {
     }
 }
 const dropbtn = document.querySelector('.dropbtn');
-const dropdown = document.querySelector('.dropdown-content');
+const dropdown = document.querySelector('.dropdown');
 if (dropbtn && dropdown) {
     dropbtn.addEventListener('click', function(e) {
         e.stopPropagation(); 
