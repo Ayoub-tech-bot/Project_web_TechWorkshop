@@ -10,3 +10,4 @@ dropbtn.addEventListener('click', function(e) {
 window.addEventListener('click', function() {
     dropdown.classList.remove('active');
 });
+/* --------------- */
