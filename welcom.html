@@ -3,18 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome - Tech Workshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="welcomecss.css">
 </head>
 <body>
-    <h1 id="Welcome_H1" align="center">Welcome to the community !</h1> 
-    <a href="index.html" align="center"><-- Go to the home page</a> 
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <div class="card-header">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h1 id="welcomeTitle">Welcome to Tech Workshop</h1>
+                <p class="subtitle">Your technology journey begins now</p>
+            </div>
 
+            <div class="welcome-badge" id="welcomeBadge">
+                <div class="badge-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="badge-content">
+                    <h3 id="messageTitle">Account Created</h3>
+                    <p id="messageText">Welcome to Tech Workshop! Your account is ready.</p>
+                </div>
+            </div>
 
+            <div class="actions-section">
+                <button class="btn btn-primary" onclick="window.location.href='index.html#Service'">
+                    <i class="fas fa-graduation-cap"></i>
+                    Explore Workshops
+                </button>
+                
+                <button class="btn btn-secondary" onclick="window.location.href='team.html'">
+                    <i class="fas fa-users"></i>
+                    Meet Our Team
+                </button>
+                
+                <a href="index.html" class="btn btn-home">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
 
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Courses</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="welcom.js">
-
-    </script>
-    
+    <script src="welcomjs.js"></script>
 </body>
 </html>

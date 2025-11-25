@@ -7,12 +7,32 @@ function saveAllChanges() {
     const newPassword = document.getElementById('newPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    if (!fullName) return alert('Please enter your full name.');
-    if (!email) return alert('Please enter your email.');
+    clearErrorMessages();
+
+    let isValid = true;
+
+    if (!fullName) {
+        showError('Please enter your full name.', 'fullName');
+        isValid = false;
+    }
+    if (!email) {
+        showError('Please enter your email.', 'email');
+        isValid = false;
+    }
 
     if (newPassword) {
-        if (newPassword !== confirmPassword) return alert('Passwords do not match!');
-        if (newPassword.length < 6) return alert('Password must be at least 6 characters long.');
+        if (newPassword.length < 6) {
+            showError('Password must be at least 6 characters long.', 'newPassword');
+            isValid = false;
+        }
+        if (newPassword !== confirmPassword) {
+            showError('Passwords do not match!', 'confirmPassword');
+            isValid = false;
+        }
+    }
+
+    if (!isValid) {
+        return; 
     }
 
     document.getElementById('profileName').textContent = fullName;
@@ -28,6 +48,31 @@ function saveAllChanges() {
     }
 
     alert('All changes saved successfully!');
+}
+
+function showError(message, fieldId) {
+    const errorElement = document.getElementById(fieldId + 'Error');
+    const inputElement = document.getElementById(fieldId);
+    
+    if (errorElement && inputElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+        inputElement.classList.add('error');
+    }
+}
+
+function clearErrorMessages() {
+    const errorMessages = document.querySelectorAll('.error-message');
+    const errorInputs = document.querySelectorAll('.form-group input.error');
+    
+    errorMessages.forEach(error => {
+        error.textContent = '';
+        error.style.display = 'none';
+    });
+    
+    errorInputs.forEach(input => {
+        input.classList.remove('error');
+    });
 }
 
 function loadProfileData() {
@@ -56,7 +101,10 @@ function deleteAvatar() {
 document.getElementById('avatarInput').addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file) {
-        if (!['image/jpeg', 'image/png'].includes(file.type)) return alert('Please select a JPEG or PNG image.');
+        if (!['image/jpeg', 'image/png'].includes(file.type)) {
+            alert('Please select a JPEG or PNG image.');
+            return;
+        }
         const reader = new FileReader();
         reader.onload = function(e) {
             const emptyAvatar = document.querySelector('.empty-avatar');
@@ -64,6 +112,17 @@ document.getElementById('avatarInput').addEventListener('change', function(event
             localStorage.setItem('profileAvatar', e.target.result);
         };
         reader.readAsDataURL(file);
+    }
+});
+
+document.getElementById('confirmPassword').addEventListener('input', function() {
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = this.value;
+    
+    if (confirmPassword && newPassword !== confirmPassword) {
+        showError('Passwords do not match!', 'confirmPassword');
+    } else {
+        clearErrorMessages();
     }
 });
 
