@@ -25,6 +25,7 @@ FormLog.addEventListener('submit', (e) => {
     if(test){
         e.preventDefault(); 
         localStorage.setItem("action", "Login");
+        localStorage.setItem("username", Email.value.split('@')[0]); 
         window.location.href = "welcom.html";
     }
 
