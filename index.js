@@ -11,6 +11,29 @@ window.addEventListener('click', function() {
     dropdown.classList.remove('active');
 });
 /* --------------- */
+document.addEventListener('DOMContentLoaded', function() {
+    const profileLink = document.querySelector('a[href="create_account.html"]');
+    if (profileLink) {
+        profileLink.addEventListener('click', function(e) {
+            const username = localStorage.getItem('username');
+            if (username) {
+                e.preventDefault();
+                window.location.href = 'profile.html';
+            }
+        });
+    }
+    const notificationLink = document.querySelector('a[href="notification.html"]');
+    if (notificationLink) {
+        notificationLink.addEventListener('click', function(e) {
+            const username = localStorage.getItem('username');
+            if (!username) {
+                e.preventDefault();
+                alert('Please create an account to view notifications.');
+                window.location.href = 'create_account.html';
+            }
+        });
+    }
+});
 
 
 
