@@ -3,6 +3,11 @@ const welcomeTitle = document.getElementById("Welcome_H1");
 const username = localStorage.getItem("username");
 const action = localStorage.getItem("action");
 
+if (window.location.pathname.includes("welcom.html")) {
+    sessionStorage.setItem("test_access", "done");
+}
+
+
 if (welcomeTitle) {
     
     if (action === "acc_creat") {
@@ -13,6 +18,12 @@ if (welcomeTitle) {
     } 
     else {
         welcomeTitle.textContent = `Welcome ${username}!`;
-    }
-    
-} 
+    }  
+
+}
+
+
+
+
+
+
