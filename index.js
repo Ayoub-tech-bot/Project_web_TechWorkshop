@@ -1,4 +1,5 @@
 const dropbtn = document.querySelector('.dropbtn');
+<<<<<<< HEAD
 const dropdown = document.querySelector('.dropdown-content');
 const notificationIcon = document.querySelector('a[href="notification.html"]');
 const profileIcon = document.querySelector('a[href="create_account.html"]');
@@ -111,3 +112,20 @@ window.auth = {
         }, 1500);
     }
 };
+=======
+const dropdown = document.querySelector('.dropdown');
+
+dropbtn.addEventListener('click', function(e) {
+    e.stopPropagation(); 
+    dropdown.classList.toggle('active');
+});
+
+
+window.addEventListener('click', function() {
+    dropdown.classList.remove('active');
+});
+/* --------------- */
+
+
+
+>>>>>>> 69bcb0f26841be3b5876560072548a6ef0a478bc

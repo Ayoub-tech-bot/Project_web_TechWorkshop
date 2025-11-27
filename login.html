@@ -4,34 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login – Tech Workshop</title>
+  <link rel="stylesheet" href="logincss.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <center>
-    <br><br>
-    <h1>Welcome Back to Tech Workshop</h1><br><br><br>
-    <p>Log in to your account</p>
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html#Service">Service</a>
+      <a href="index.html#About">About us</a>
+      <a href="index.html#Contact">Contact</a>
+      <div class="nav-icons">
+        <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search">
+        <a href="team.html"><img src="pic_src/1167978_coding_development_code_dev_programming_icon.png" alt="team"></a>
+        <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification"></a>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="bg"></div>
+    <div class="container">
+      <div class="left">
+        <h1>Welcome Back</h1>
+        <p>Log in to your Tech Workshop account</p>
 
-    <div id="erroLog"></div>
-    <form action="/login.html" method="get" id="FormLogin">
-      <table cellpadding="5">
-        <tr>
-          <td align="right"><label for="Email">Email:</label></td>
-          <td><input type="email" id="Email" name="Email" required></td>
-       </tr>
-       <tr>
-         <td align="right"><label for="password">Password:</label></td>
-         <td><input type="password" id="password" name="password" required></td>
-       </tr>
-       <tr>
-         <td colspan="2" align="center">
-           <button type="submit" id="Login_Btn">Login </button>
-         </td>
-       </tr>
-      
-      </table>
-    </form>
-    <p>Don't have an account? <a href="create_account.html">Create here</a>.</p>
-  </center>
+        <div id="erroLog" class="error-box"></div>
+        
+        <form action="/login.html" method="get" id="FormLogin" class="form">
+          <div class="input-box">
+            <img src="pic_src/icons8-email-24 (1).png" class="icon">
+            <input type="email" id="Email" name="Email" placeholder="Email Address" required>
+          </div>
+          <div class="input-box">
+            <img src="pic_src/icons8-password-48 (1) (2).png" class="icon">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" id="Login_Btn">Login</button>
+        </form>
+        
+        <p class="signup-link">Don't have an account? <a href="create_account.html">Create here</a>.</p>
+      </div>
+      <div class="right">
+        <div class="overlay"></div>
+        <div class="right-text">
+          <h2>Welcome Back!</h2>
+          <p>Continue your learning journey with Tech Workshop.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo" /></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2025 Tech Workshop. All rights reserved.</p>
+        </div>
+    </footer>
+  
   <script src="login.js"></script>
 </body>
 </html>
