@@ -1,3 +1,4 @@
+
 :root {
     --primary-red: #d32f2f;
     --dark-red: #b71c1c;
@@ -691,7 +692,4 @@ body.dark .services .section-subtitle {
     color: #ffffff;
 }
 /*end*/
-/* background: white;
-    color: black;
-    transition: 0.3s ease; add to the body */
 
