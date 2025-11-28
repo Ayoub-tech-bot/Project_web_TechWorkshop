@@ -1,4 +1,4 @@
-// index.js - Fixed Authentication System for Tech Workshop
+console.log('Navigation system loaded');
 
 // DOM Elements
 const dropbtn = document.querySelector('.dropbtn');

@@ -35,6 +35,7 @@ form.addEventListener('submit', (e) => {
 
     if(confirm.value != password.value ){
         messages.push("Re-Confirm your password!");
+        errorElement.style.display = "block";
         test = false;
     }
 
@@ -43,14 +44,14 @@ form.addEventListener('submit', (e) => {
         errorElement.innerText = messages.join("," + " ");
         return;
     }
-    if(test){
-        e.preventDefault(); 
-        const username = Full_name.value.trim();
-        localStorage.setItem("username", username);
-        localStorage.setItem("action", "acc_creat");
-        window.location.href = "welcom.html";
+    errorElement.style.display = "none";
+    e.preventDefault(); 
+    const username = Full_name.value.trim();
+    localStorage.setItem("username", username);
+    localStorage.setItem("action", "acc_creat");
+    window.location.href = "welcom.html";
 
-    }
+
     
 });
 
