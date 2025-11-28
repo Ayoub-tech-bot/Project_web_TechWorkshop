@@ -1,229 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Tech Workshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="payement.css" />
     <link rel="stylesheet" href="loader.css">
-  </head>
-  <body>
+   
+</head>
+<body>
     <nav>
-      <a href="index.html"
-        ><img src=" pic_src\Ayoub_Logo-1.png" alt="logo" width="100" hight="70"
-      /></a>
-      <div id="logoLoader" class="logo-loader">
+        <div class="nav-logo">
+            <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+        </div>
+        <div id="logoLoader" class="logo-loader">
         <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
-      </div>
-      <div align="right">  
-        <img
-          id="notification_icon"
-          src="pic_src\2199103_bell_alert_notification_ring_icon.png"
-          alt="notification"
-          width="20"
-          hight="20"
-        />
-        &nbsp;&nbsp;
-        
-        <img
-          id="profile_icon"
-          src="pic_src\7853767_kashifarif_user_profile_person_account_icon.png"
-          alt="profile"
-          width="20"
-          hight="20"
-        />
-        <hr size="3" color="0" />
-      </div>
+        </div>
+        <div class="nav-btn">
+           <div class="nav-links">
+            <a href="index.html#Service">Service</a>
+            <a href="index.html#About">About us</a>
+            <a href="index.html#Contact">Contact</a>
+           </div>
+            <div class="nav-icons">
+                <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification"></a>
+                <a href="profile.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile"></a>
+            </div>
+        </div>
     </nav>
-    <br />
-    <section>
-      <h2 id="H2_reg">
-        <strong>You chosed : <a href="registre.html"> Beginer Plan </a></strong>
-      </h2>
-      <fieldset>
-        <legend><strong>Récapitulatif</strong></legend>
-        <p id="P1">Selected Plan: Beginer Plan</p>
-        <p id="P2">Price: $20</p>
-        <hr />
-        <p id="P3"><strong>Total: $20</strong></p>
-      </fieldset>
 
-      <fieldset>
-        <legend><strong>Détails du paiement</strong></legend>
-        <form action="/payement.html" method="get" id="FormPay">
-          <h4>Mode de paiement</h4>
-          <div id="errorPay"></div>
-          <input type="radio" name="payment" id="visa" checked /> 💳 Visa
-          <input type="radio" name="payment" id="mastercard" /> 💰 Mastercard
-          <br /><br />
+    <div class="container">
+        <div class="page-header">
+            <h1>Complete Your Order</h1>
+            <p>Fill in your payment information to access the <span id="selectedPlan">Beginner</span> Plan</p>
+        </div>
 
-          <label for="card_num">Card Number :</label>
-          <input
-            type="text"
-            id="card_num"
-            placeholder="1234-1234-1234-1234 💳"
-            minlength="16"
-            maxlength="16"
-            required
-          />&nbsp;&nbsp;
-          <label for="card_exp">Expiration Date :</label>
-          <input
-            type="text"
-            id="card_exp"
-            placeholder=" MM / YY "
-            minlength="5"
-            maxlength="5"
-            required
-            size="5"
-          />&nbsp;&nbsp;
-          <label for="card_sec">Security Code :</label>
-          <input
-            type="text"
-            id="card_sec"
-            placeholder=" CVC "
-            minlength="5"
-            maxlength="5"
-            required
-            size="4"
-          /><br /><br />
-          <label for="nom">Last name : </label>
-          <input type="text" id="nom" placeholder="Nom" required />&nbsp;&nbsp;
-          <label for="prenom">Fisrt Name : </label>
-          <input
-            type="text"
-            id="Prenom"
-            placeholder="Prenom"
-            required
-          /><br /><br />
-          <label for="Email">Email</label>
-          <input
-            type="email"
-            id="Email"
-            placeholder="custom@gmail.com"
-            required
-          /><br /><br />
-          <label for="Num_tel">Phone Number :</label>
-          <select id="country-code" name="country-code">
-            <option value="">-- Choisir un pays --</option>
-            <option value="+1">🇺🇸 États-Unis (+1)</option>
-            <option value="+7">🇷🇺 Russie (+7)</option>
-            <option value="+20">🇪🇬 Égypte (+20)</option>
-            <option value="+27">🇿🇦 Afrique du Sud (+27)</option>
-            <option value="+30">🇬🇷 Grèce (+30)</option>
-            <option value="+31">🇳🇱 Pays-Bas (+31)</option>
-            <option value="+32">🇧🇪 Belgique (+32)</option>
-            <option value="+33">🇫🇷 France (+33)</option>
-            <option value="+34">🇪🇸 Espagne (+34)</option>
-            <option value="+39">🇮🇹 Italie (+39)</option>
-            <option value="+40">🇷🇴 Roumanie (+40)</option>
-            <option value="+41">🇨🇭 Suisse (+41)</option>
-            <option value="+44">🇬🇧 Royaume-Uni (+44)</option>
-            <option value="+45">🇩🇰 Danemark (+45)</option>
-            <option value="+46">🇸🇪 Suède (+46)</option>
-            <option value="+47">🇳🇴 Norvège (+47)</option>
-            <option value="+48">🇵🇱 Pologne (+48)</option>
-            <option value="+49">🇩🇪 Allemagne (+49)</option>
-            <option value="+52">🇲🇽 Mexique (+52)</option>
-            <option value="+55">🇧🇷 Brésil (+55)</option>
-            <option value="+60">🇲🇾 Malaisie (+60)</option>
-            <option value="+61">🇦🇺 Australie (+61)</option>
-            <option value="+62">🇮🇩 Indonésie (+62)</option>
-            <option value="+63">🇵🇭 Philippines (+63)</option>
-            <option value="+64">🇳🇿 Nouvelle-Zélande (+64)</option>
-            <option value="+65">🇸🇬 Singapour (+65)</option>
-            <option value="+81">🇯🇵 Japon (+81)</option>
-            <option value="+82">🇰🇷 Corée du Sud (+82)</option>
-            <option value="+84">🇻🇳 Vietnam (+84)</option>
-            <option value="+86">🇨🇳 Chine (+86)</option>
-            <option value="+90">🇹🇷 Turquie (+90)</option>
-            <option value="+91">🇮🇳 Inde (+91)</option>
-            <option value="+92">🇵🇰 Pakistan (+92)</option>
-            <option value="+93">🇦🇫 Afghanistan (+93)</option>
-            <option value="+94">🇱🇰 Sri Lanka (+94)</option>
-            <option value="+95">🇲🇲 Myanmar (+95)</option>
-            <option value="+98">🇮🇷 Iran (+98)</option>
-            <option value="+211">🇸🇸 Soudan du Sud (+211)</option>
-            <option value="+212" selected>mar Maroc (+212)</option>
-            <option value="+213">🇩🇿 Algérie (+213)</option>
-            <option value="+216">🇹🇳 Tunisie (+216)</option>
-            <option value="+218">🇱🇾 Libye (+218)</option>
-            <option value="+220">🇬🇲 Gambie (+220)</option>
-            <option value="+221">🇸🇳 Sénégal (+221)</option>
-            <option value="+222">🇲🇷 Mauritanie (+222)</option>
-            <option value="+225">🇨🇮 Côte d’Ivoire (+225)</option>
-            <option value="+226">🇧🇫 Burkina Faso (+226)</option>
-            <option value="+228">🇹🇬 Togo (+228)</option>
-            <option value="+229">🇧🇯 Bénin (+229)</option>
-            <option value="+230">🇲🇺 Maurice (+230)</option>
-            <option value="+231">🇱🇷 Libéria (+231)</option>
-            <option value="+233">🇬🇭 Ghana (+233)</option>
-            <option value="+234">🇳🇬 Nigeria (+234)</option>
-            <option value="+237">🇨🇲 Cameroun (+237)</option>
-            <option value="+238">🇨🇻 Cap-Vert (+238)</option>
-            <option value="+240">🇬🇶 Guinée équatoriale (+240)</option>
-            <option value="+241">🇬🇦 Gabon (+241)</option>
-            <option value="+243">🇨🇩 RD Congo (+243)</option>
-            <option value="+244">🇦🇴 Angola (+244)</option>
-            <option value="+248">🇸🇨 Seychelles (+248)</option>
-            <option value="+249">🇸🇩 Soudan (+249)</option>
-            <option value="+250">🇷🇼 Rwanda (+250)</option>
-            <option value="+251">🇪🇹 Éthiopie (+251)</option>
-            <option value="+254">🇰🇪 Kenya (+254)</option>
-            <option value="+255">🇹🇿 Tanzanie (+255)</option>
-            <option value="+256">🇺🇬 Ouganda (+256)</option>
-            <option value="+260">🇿🇲 Zambie (+260)</option>
-            <option value="+261">🇲🇬 Madagascar (+261)</option>
-            <option value="+262">🇷🇪 Réunion (+262)</option>
-            <option value="+263">🇿🇼 Zimbabwe (+263)</option>
-          </select>
-          <input
-            type="number"
-            id="Num_tel"
-            maxlength="14"
-            required
-          /><br /><br />
-          <label for="ville">City :</label>
-          <input
-            type="text"
-            id="ville"
-            placeholder="Ville"
-            required
-          />&nbsp;&nbsp;
-          <label for="zip">Zip Code :</label>
-          <input type="text" id="zip" maxlength="8" required /><br /><br />
+        <div class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+                </div>
+                <div class="summary-item">
+                    <span>Selected Plan:</span>
+                    <span id="planName">Beginner Plan</span>
+                </div>
+                <div class="summary-item">
+                    <span>Duration:</span>
+                    <span>1 month</span>
+                </div>
+                <div class="summary-item">
+                    <span>Price:</span>
+                    <span id="planPrice">$20.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Taxes:</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span id="totalPrice">$20.00</span>
+                </div>
+                
+                <div class="security-info">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure Payment - Your data is protected</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-credit-card"></i> Payment Details</h2>
+                </div>
+                
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="payment-methods">
+                            <label class="payment-method selected">
+                                <input type="radio" name="payment" value="visa" checked>
+                                <div class="payment-icon">💳</div>
+                                <div>Visa</div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="mastercard">
+                                <div class="payment-icon">💰</div>
+                                <div>Mastercard</div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="paypal">
+                                <div class="payment-icon"><i class="fab fa-paypal"></i></div>
+                                <div>PayPal</div>
+                            </label>
+                        </div>
+                    </div>
 
-          <input type="checkbox" required />
-          <a id="openTerms" class="terms-link"
-            >agree to the terms and conditions.</a
-          >
-          <br /><br />
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        <div class="error-message" id="cardNumberError"></div>
+                    </div>
 
-          <button id="BtnPay" type="submit">Confirm Payment</button>
-        </form>
-      </fieldset>
-    </section>
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <h3>Your payment has been sent ✔</h3>
-        <button id="closePopup">Go to the home page</button>
-      </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiration Date</label>
+                            <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" maxlength="5" required>
+                            <div class="error-message" id="expiryDateError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">Security Code</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="CVV" maxlength="3" required>
+                            <div class="error-message" id="cvvError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardholderName">Cardholder Name</label>
+                        <input type="text" id="cardholderName" class="form-control" placeholder="Name as shown on card" required>
+                        <div class="error-message" id="cardholderNameError"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div style="display: flex; gap: 10px;">
+                                <select id="countryCode" class="form-control" style="width: 40%;">
+                                    <option value="+212">+212 MAR</option>
+                                    <option value="+33">+33 FR</option>
+                                    <option value="+1">+1 USA</option>
+                                </select>
+                                <input type="tel" id="phone" class="form-control" placeholder="Number" style="width: 60%;" required>
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control" placeholder="City" required>
+                            <div class="error-message" id="cityError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Zip Code</label>
+                            <input type="text" id="zipCode" class="form-control" placeholder="Zip Code" maxlength="8" required>
+                            <div class="error-message" id="zipCodeError"></div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#" class="terms-link" id="openTerms">terms and conditions</a></label>
+                    </div>
+
+                    <button type="submit" class="btn-pay pulse">
+                        <i class="fas fa-lock"></i> Pay Now - <span id="payAmount">$20.00</span>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <div style="font-size: 4rem; color: var(--success-color); margin-bottom: 20px;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Payment Successful!</h3>
+            <p>Your order has been processed successfully. You will receive a confirmation email in a few minutes.</p>
+            <button id="closePopup" class="close-btn">Return to Homepage</button>
+        </div>
+    </div>
+
     <div id="termsPopup" class="popup">
-      <div class="popup-content">
-        <h2>Terms & Conditions</h2>
-        <p>
-          <strong>Payment Terms:</strong><br />
-          1. All payments are final and non-refundable.<br />
-          2. Your subscription will auto-renew unless cancelled.<br />
-          3. We process data via [Payment Provider] and do not store card
-          details.<br />
-          4. By paying, you agree to our full Terms of Service located on our
-          website.<br />
-        </p>
-        <button id="closeTerms" class="close-btn">Close</button>
-      </div>
+        <div class="popup-content">
+            <h2>Terms & Conditions</h2>
+            <p>
+                <strong>Payment Terms:</strong><br>
+                1. All payments are final and non-refundable.<br>
+                2. Your subscription will auto-renew unless cancelled.<br>
+                3. We process data via our secure payment processor and do not store card details.<br>
+                4. By paying, you agree to our full Terms of Service located on our website.
+            </p>
+            <button id="closeTerms" class="close-btn">Close</button>
+        </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="Tech Workshop Logo"></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Tech Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="payement.js"></script>
     <script src="loader.js"></script>
-  </body>
+</body>
 </html>

@@ -144,12 +144,27 @@ button {
     border-radius: 12px;
     font-size: 17px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0px;
     transition: 0.3s ease;
 }
 
 button:hover {
     background: var(--dark-red);
+}
+.signup-link {
+    text-align: center;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link a {
+    color: var(--primary-red);
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
 .input-box {
   position: relative;
@@ -269,8 +284,6 @@ footer {
     }
 
     .right {
-        height: 280px;
+        height: 280px;
     }
 }
-
-

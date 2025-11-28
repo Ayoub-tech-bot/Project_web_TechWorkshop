@@ -13,62 +13,80 @@
            <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"></a>
         </div>
         <div id="logoLoader" class="logo-loader">
-         <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
+        <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
         </div>
-        <div class="nav-bar" align="right">
+        <div class="nav-bar">
           <a href="index.html#Service">Service</a> 
           <a href="index.html#About">About us</a> 
-          <a href="index.html#Contact">Contact </a>
-          <a href="profile.html"> <img class="profil" src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" width="22" /></a>
+          <a href="index.html#Contact">Contact</a>
+          <a href="profile.html"> <img class="profil" src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile"></a>
         </div>
     </nav>
-    <h1 align="center" > Notifications</h1>
-    <p align="center">Vous trouverez ici toutes vos notifications récentes</p>
-    <br>
-    <center>
-    <table border="1" cellpadding="12" cellspacing="0">
-        <tr>
-            <th>N°</th>
-            <th>Date / Heure</th>
-            <th>Notification</th>
-            <th>Statut</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>01/11/2025 - 14:20</td>
-            <td>Nouvelle formation en programmation disponible.</td>
-            <td>Non lue</td>
-            <td><a href="#">Marquer comme lue</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>30/10/2025 - 09:45</td>
-            <td>Votre profil a été mis à jour avec succès.</td>
-            <td>Lue</td>
-            <td><a href="#">Voir détails</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>28/10/2025 - 17:50</td>
-            <td>Vous avez reçu un nouveau message.</td>
-            <td>Non lue</td>
-            <td><a href="#">Ouvrir</a></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>25/10/2025 - 08:10</td>
-            <td>Confirmation de participation à l’atelier.</td>
-            <td>Lue</td>
-            <td><a href="#">Voir</a></td>
-        </tr>
-    </table>
-    </center>
-    <br><br>  
-    <center>
-    <a href="index.html" class="return-btn">⬅ Retour à l'accueil</a>
-    </center>
-    <br><br>
+
+    <div class="main-content">
+        <div class="notification-header">
+            <h1>Notifications</h1>
+            <p>Vous trouverez ici toutes vos notifications récentes</p>
+            
+            <div class="notification-stats">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Non lues</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Lues</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table cellpadding="12" cellspacing="0">
+                <tr>
+                    <th>N°</th>
+                    <th>Date / Heure</th>
+                    <th>Notification</th>
+                    <th>Statut</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>01/11/2025 - 14:20</td>
+                    <td>Nouvelle formation en programmation disponible.</td>
+                    <td><span class="status-badge status-unread">Non lue</span></td>
+                    <td><a href="#" class="action-link">Marquer comme lue</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>30/10/2025 - 09:45</td>
+                    <td>Votre profil a été mis à jour avec succès.</td>
+                    <td><span class="status-badge status-read">Lue</span></td>
+                    <td><a href="#" class="action-link">Voir détails</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>28/10/2025 - 17:50</td>
+                    <td>Vous avez reçu un nouveau message.</td>
+                    <td><span class="status-badge status-unread">Non lue</span></td>
+                    <td><a href="#" class="action-link">Ouvrir</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>25/10/2025 - 08:10</td>
+                    <td>Confirmation de participation à l'atelier.</td>
+                    <td><span class="status-badge status-read">Lue</span></td>
+                    <td><a href="#" class="action-link">Voir</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <center><a href="index.html" class="return-btn">⬅ Retour à l'accueil</a></center>
+    </div>
+
     <hr>
     <footer>
         <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
