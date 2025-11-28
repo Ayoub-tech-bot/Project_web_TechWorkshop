@@ -1,125 +1,55 @@
-:root {
-    --primary-red: #d32f2f; --dark-red: #b71c1c; --darker-red: #7f0000;
-    --almost-black: #212121; --black: #000000; --light-gray: #f5f5f5; --white: #ffffff;
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
 body {
-    background: linear-gradient(135deg, var(--darker-red) 0%, var(--black) 100%);
-    color: var(--white); min-height: 100vh; display: flex; align-items: center; 
+    background: linear-gradient(135deg, #d32f2f 0%, #ffffff 100%);
+    min-height: 100vh; display: flex; align-items: center;
     justify-content: center; padding: 20px;
 }
 
-.welcome-container { width: 100%; max-width: 500px; }
+.welcome-container { width: 100%; max-width: 320px; }
 
 .welcome-card {
-    background: rgba(33, 33, 33, 0.9); border-radius: 20px; padding: 40px 30px;
-    text-align: center; border: 1px solid rgba(211, 47, 47, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); animation: cardAppear 0.8s ease-out;
+    background: white; border-radius: 20px; padding: 40px 30px;
+    text-align: center; box-shadow: 0 10px 30px rgba(211, 47, 47, 0.3);
+    animation: fadeIn 0.8s ease-out;
 }
 
-@keyframes cardAppear {
-    from { opacity: 0; transform: translateY(30px); }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.card-header { margin-bottom: 30px; }
-
-.logo {
-    font-size: 4rem; color: var(--primary-red); margin-bottom: 20px;
-    animation: pulse 2s infinite;
+.welcome-icon {
+    width: 60px; height: 60px; background: #d32f2f; color: white;
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-size: 1.5rem; font-weight: bold;
+    margin: 0 auto 20px; animation: bounce 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes bounce {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
 
-h1 {
-    font-size: 2.5rem; margin-bottom: 10px; font-weight: bold;
-    background: linear-gradient(45deg, var(--white), var(--primary-red));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
+h1 { font-size: 2rem; color: #333; margin-bottom: 10px; font-weight: 600; }
+p { color: #666; margin-bottom: 25px; font-size: 1rem; }
+
+.start-btn {
+    background: #d32f2f; color: white; border: none; padding: 14px 30px;
+    border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer;
+    transition: all 0.3s ease; width: 100%;
 }
 
-.subtitle { font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 10px; }
-
-.welcome-badge {
-    display: flex; align-items: center; gap: 20px; margin-bottom: 30px; padding: 0;
-    animation: badgeSlide 0.6s ease-out 0.3s both;
+.start-btn:hover {
+    background: #b71c1c; transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
 }
-
-@keyframes badgeSlide {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-.badge-circle {
-    width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center;
-    justify-content: center; flex-shrink: 0; border: 3px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, var(--primary-red), var(--darker-red));
-    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); animation: circleRotate 3s ease-in-out infinite;
-}
-
-@keyframes circleRotate {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
-}
-
-.badge-circle i { color: var(--white); font-size: 2rem; }
-
-.badge-content { text-align: left; flex: 1; }
-.badge-content h3 { font-size: 1.4rem; margin-bottom: 8px; color: var(--primary-red); font-weight: bold; }
-.badge-content p { color: rgba(255, 255, 255, 0.9); font-size: 1rem; line-height: 1.4; margin: 0; }
-
-.actions-section { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
-
-.btn {
-    display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 25px;
-    border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer;
-    transition: all 0.3s ease; text-decoration: none;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-red), var(--darker-red)); color: var(--white);
-    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
-}
-
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4); }
-
-.btn-secondary {
-    background: transparent; color: var(--white); border: 2px solid var(--primary-red);
-}
-
-.btn-secondary:hover { background: rgba(211, 47, 47, 0.1); transform: translateY(-3px); }
-
-.btn-home {
-    background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.2); margin-top: 10px;
-}
-
-.btn-home:hover { background: rgba(255, 255, 255, 0.1); color: var(--white); transform: translateY(-3px); }
-
-.stats-section {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-    background: rgba(211, 47, 47, 0.1); border-radius: 15px; padding: 25px 20px;
-    border: 1px solid rgba(211, 47, 47, 0.3);
-}
-
-.stat-item { text-align: center; }
-.stat-number { font-size: 1.8rem; font-weight: bold; color: var(--primary-red); margin-bottom: 5px; }
-.stat-label { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; letter-spacing: 1px; }
 
 @media (max-width: 480px) {
-    .welcome-card { padding: 30px 20px; }
-    h1 { font-size: 2rem; }
-    .logo { font-size: 3.5rem; }
-    .welcome-badge { flex-direction: column; text-align: center; gap: 15px; }
-    .badge-content { text-align: center; }
-    .badge-circle { width: 70px; height: 70px; }
-    .badge-circle i { font-size: 1.8rem; }
-    .btn { padding: 14px 20px; font-size: 0.95rem; }
-    .stats-section { grid-template-columns: 1fr; gap: 15px; padding: 20px 15px; }
-    .stat-number { font-size: 1.6rem; }
+    .welcome-card { padding: 30px 25px; }
+    h1 { font-size: 1.8rem; }
+    .welcome-icon { width: 50px; height: 50px; font-size: 1.3rem; }
 }

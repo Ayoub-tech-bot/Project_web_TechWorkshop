@@ -1,118 +1,5 @@
+
 const dropbtn = document.querySelector('.dropbtn');
-<<<<<<< HEAD
-const dropdown = document.querySelector('.dropdown-content');
-const notificationIcon = document.querySelector('a[href="notification.html"]');
-const profileIcon = document.querySelector('a[href="create_account.html"]');
-const navIcons = document.querySelector('.nav-icons');
-
-function checkLoginStatus() {
-    try {
-        const user = localStorage.getItem('currentUser');
-        if (!user) return false;
-        
-        const userData = JSON.parse(user);
-        return userData && userData.email; // Proper validation
-    } catch (error) {
-        console.error('Error checking login status:', error);
-        return false;
-    }
-}
-
-function getCurrentUser() {
-    try {
-        return JSON.parse(localStorage.getItem('currentUser'));
-    } catch (error) {
-        return null;
-    }
-}
-function updateNavigationUI() {
-    const isLoggedIn = checkLoginStatus();
-    const user = getCurrentUser();
-    
-    if (isLoggedIn && user && profileIcon) {
-        profileIcon.href = 'profile.html';
-
-        addUserIndicator(user.name);
-    } else if (profileIcon) {
-        profileIcon.href = 'create_account.html';
-        removeUserIndicator();
-    }
-}
-
-
-    
-    if (navIcons) {
-        navIcons.parentNode.insertBefore(userWelcome, navIcons);
-    }
-}
-
-function removeUserIndicator() {
-    const existingWelcome = document.querySelector('.user-welcome');
-    if (existingWelcome) {
-        existingWelcome.remove();
-    }
-}
-
-if (notificationIcon) {
-    notificationIcon.addEventListener('click', function(e) {
-        if (!checkLoginStatus()) {
-            e.preventDefault();
-            showWelcomeMessage('Please create an account to view your notifications');
-            setTimeout(() => {
-                window.location.href = 'create_account.html';
-            }, 1500);
-        }
-    });
-}
-
-// Handle profile icon click (IMPROVED)
-if (profileIcon) {
-    profileIcon.addEventListener('click', function(e) {
-        if (checkLoginStatus()) {
-            e.preventDefault();
-            window.location.href = 'profile.html';
-        }
-    });
-}
-    setTimeout(() => {
-        if (messageDiv.parentNode) {
-            messageDiv.style.animation = 'slideOut 0.3s ease-in';
-            setTimeout(() => messageDiv.remove(), 300);
-        }
-    }, 3000);
-}
-if (dropbtn && dropdown) {
-    dropbtn.addEventListener('click', function(e) {
-        e.stopPropagation(); 
-        dropdown.classList.toggle('active');
-    });
-
-    window.addEventListener('click', function() {
-        dropdown.classList.remove('active');
-    });
-}
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ Authentication system loaded');
-    updateNavigationUI();
-    const justLoggedIn = sessionStorage.getItem('justLoggedIn');
-    if (justLoggedIn && checkLoginStatus()) {
-        const user = getCurrentUser();
-        showWelcomeMessage(`Welcome back, ${user.name}! 🎉`);
-        sessionStorage.removeItem('justLoggedIn');
-    }
-});
-window.auth = {
-    isLoggedIn: checkLoginStatus,
-    getCurrentUser: getCurrentUser,
-    logout: function() {
-        localStorage.removeItem('currentUser');
-        showWelcomeMessage('Logged out successfully!');
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 1500);
-    }
-};
-=======
 const dropdown = document.querySelector('.dropdown');
 
 dropbtn.addEventListener('click', function(e) {
@@ -126,6 +13,47 @@ window.addEventListener('click', function() {
 });
 /* --------------- */
 
+const profileIcon = document.getElementById("profile_icon");
+const notificationIcon = document.getElementById("notification_icon");
 
+profileIcon.addEventListener("click", () => {
+    const access = sessionStorage.getItem("test_access");
 
->>>>>>> 69bcb0f26841be3b5876560072548a6ef0a478bc
+    if (access === "done") {
+        
+        window.location.href = "profile.html";
+    } else {
+        
+        window.location.href = "create_account.html";
+    }
+});
+notificationIcon.addEventListener("click", () => {
+    const access = sessionStorage.getItem("test_access");
+
+    if (access === "done") {
+        
+        window.location.href = "notification.html";
+    } else {
+        
+        window.location.href = "create_account.html";
+    }
+});
+/* mode sombre */
+const themeBtn = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.textContent = "☀️";   
+}
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeBtn.textContent = "☀️";  
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeBtn.textContent = "🌙";  
+        localStorage.setItem("theme", "light");
+    }
+});

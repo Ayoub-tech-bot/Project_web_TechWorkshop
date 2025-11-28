@@ -66,6 +66,23 @@ nav {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.nav-icons1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-icons1 img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-icons1 img:hover {
+    transform: scale(1.1);
+}
 .nav-icons {
     display: flex;
     align-items: center;
@@ -83,6 +100,7 @@ nav {
 .nav-icons img:hover {
     transform: scale(1.1);
 }
+
 
 .team-hero {
     display: flex;
@@ -172,14 +190,6 @@ nav {
     border-radius: 2px;
 }
 
-.section-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: var(--almost-black);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .team-container {
     display: grid;

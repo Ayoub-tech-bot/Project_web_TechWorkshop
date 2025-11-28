@@ -6,22 +6,43 @@
     <title>Our Team - Tech work-shop</title>
     <link rel="stylesheet" href="teamcss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="loader.css">
+
 </head>
 <body>
     <nav>
         <div class="nav-logo">
             <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo" /></a>
         </div>
+        <div id="logoLoader" class="logo-loader">
+         <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
+        </div>
         <div class="nav-links">
             <a href="index.html#Service">Services</a>
             <a href="index.html#About">About Us</a>
             <a href="index.html#Contact">Contact</a>
-            <div class="nav-icons">
-                <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search" />
+        <div class="nav-icons">
+            <div class="dropdown">
+                <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search" class="dropbtn" />
+                    <ul class="dropdown-content">
+                     <li><a href="coding.html">Coding Bootcamp</a></li>
+                     <li><a href="data.html">Data Science</a></li>
+                     <li><a href="ai.html">Artificial Intelligence (AI)</a></li>
+                     <li><a href="">Web Development</a></li>
+                     <li><a href="">Cybersecurity</a></li>
+                     <li><a href="">Mobile App Development</a></li>
+                     <li><a href="">Cloud Computing</a></li>
+                     <li><a href="">Robotics & IoT</a></li>
+                     <li><a href="">Tech Career Mentorship</a></li>
+                   </ul>
+
+                </div>
+            <div class="nav-icons1">
                 <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification" /></a>
-                <a href="profil.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" /></a>
+                <a href="profile.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" /></a>
             </div>
         </div>
+        
     </nav>
 
 
@@ -36,7 +57,6 @@
     <section class="team-section">
         <div class="section-header">
             <h2 class="section-title">Meet Our Team</h2>
-            <p class="section-subtitle">Passionate professionals who bring your projects to life</p>
         </div>
 
         <div class="team-container">
@@ -150,6 +170,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="loader.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

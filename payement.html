@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="payement.css" />
+    <link rel="stylesheet" href="loader.css">
   </head>
   <body>
     <nav>
       <a href="index.html"
         ><img src=" pic_src\Ayoub_Logo-1.png" alt="logo" width="100" hight="70"
       /></a>
+      <div id="logoLoader" class="logo-loader">
+        <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
+      </div>
       <div align="right">
         <a href="index.html#Service"> Service</a>&nbsp;&nbsp;
         <a href="index.html#About"> About us </a>&nbsp;&nbsp;
-        <a href="index.html#Contact">Contact </a>&nbsp;&nbsp;
-        <img
-          src="pic_src\115695_magnifying glass_zoom_find_search_icon.png"
-          alt="search"
-          width="20"
-          height="20"
-        />
-        &nbsp;&nbsp;
+        <a href="index.html#Contact">Contact </a>&nbsp;&nbsp; &nbsp;&nbsp;
         <a href="notification.html"
           ><img
             src="pic_src\2199103_bell_alert_notification_ring_icon.png"
@@ -217,15 +214,18 @@
       <div class="popup-content">
         <h2>Terms & Conditions</h2>
         <p>
-          <strong>Payment Terms:</strong><br>
-         1. All payments are final and non-refundable.<br>
-         2. Your subscription will auto-renew unless cancelled.<br>
-         3. We process data via [Payment Provider] and do not store card details.<br>
-         4. By paying, you agree to our full Terms of Service located on our website.<br>    
+          <strong>Payment Terms:</strong><br />
+          1. All payments are final and non-refundable.<br />
+          2. Your subscription will auto-renew unless cancelled.<br />
+          3. We process data via [Payment Provider] and do not store card
+          details.<br />
+          4. By paying, you agree to our full Terms of Service located on our
+          website.<br />
         </p>
         <button id="closeTerms" class="close-btn">Close</button>
       </div>
     </div>
     <script src="payement.js"></script>
+    <script src="loader.js"></script>
   </body>
 </html>

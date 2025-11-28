@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loader.css">
     <title>Sign Up – Tech Workshop</title>
   </head>
   <body>
@@ -29,6 +30,9 @@
         </tr>
       </table>
       <hr size="3" color="0" />
+      <div id="logoLoader" class="logo-loader">
+        <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
+      </div>
     </header>
 
     <main>
@@ -38,11 +42,10 @@
 
         <div id="error"></div>
         <form action="/create_account.html" method="get" id="FormCA">
-          
           <table cellpadding="5" cellspacing="0">
             <tr>
               <td align="right"><label for="name">Full Name:</label></td>
-              <td><input type="text" id="name" name="name" req/></td>
+              <td><input type="text" id="name" name="name" req /></td>
             </tr>
             <tr>
               <td align="right"><label for="email">Email:</label></td>
@@ -50,13 +53,17 @@
             </tr>
             <tr>
               <td align="right"><label for="password">Password:</label></td>
-              <td><input type="password" id="password" name="password" required /></td>
+              <td>
+                <input type="password" id="password" name="password" required />
+              </td>
             </tr>
             <tr>
               <td align="right">
                 <label for="confirm">Confirm Password:</label>
               </td>
-              <td><input type="password" id="confirm" name="confirm" required /></td>
+              <td>
+                <input type="password" id="confirm" name="confirm" required />
+              </td>
             </tr>
             <tr>
               <td colspan="2" align="center">
@@ -75,5 +82,6 @@
       <strong> <center>@ALL RIGHTS RESERVED</center> </strong>
     </footer>
     <script src="create_account_sc.js"></script>
+    <script src="loader.js"></script>
   </body>
 </html>
