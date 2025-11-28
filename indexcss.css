@@ -20,6 +20,9 @@ body {
     background-color: var(--white);
     color: var(--almost-black);
     line-height: 1.6;
+    background: white;
+    color: black;
+    transition: 0.3s ease;
 }
 
 a {
@@ -650,3 +653,46 @@ img {
     max-height: 500px; 
     opacity: 1;
 }
+/*mode sombre*/
+.dark {
+    background: #121212;
+    color: white;
+}
+.theme-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+}
+body.dark .hero .btn {
+    background: linear-gradient(to right, var(--primary-red), var(--darker-red));
+    color: white;
+}
+body.dark .services {
+    background-color: #1e1e1e;  
+}
+body.dark .service-card {
+    background-color: #2a2a2a;   
+    color: white;                
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05); 
+}
+body.dark .services .section-title,
+body.dark .services .section-subtitle {
+    color: #ffffff;
+}
+/*end*/
+/* background: white;
+    color: black;
+    transition: 0.3s ease; add to the body */
+

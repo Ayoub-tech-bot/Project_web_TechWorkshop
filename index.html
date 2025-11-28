@@ -6,16 +6,22 @@
     <title>Tech work-shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="indexcss.css">
+    <link rel="stylesheet" href="loader.css">
 </head>
 <body>
     <nav>
         <div class="nav-logo">
             <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo" /></a>
+            
+        </div>
+        <div id="logoLoader" class="logo-loader">
+         <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
         </div>
         <div class="nav-links">
             <a href="#Service">Service</a>
             <a href="#About">About us</a>
             <a href="#Contact">Contact</a>
+            <button id="themeToggle" class="theme-btn">🌙</button>
 
             <div class="nav-icons">
                 <div class="dropdown">
@@ -34,8 +40,8 @@
 
                 </div>
                 <a href="team.html"><img src="pic_src/1167978_coding_development_code_dev_programming_icon.png" alt="team"/></a>
-                <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification" /></a>
-                <a href="create_account.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" /></a>
+                <img id="notification_icon" src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification" />
+                <img id="profile_icon" src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile" />
             </div>
         </div>
     </nav>
@@ -164,5 +170,6 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script src="loader.js"></script>
 </body>
 </html>
