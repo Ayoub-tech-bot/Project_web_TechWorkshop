@@ -8,10 +8,9 @@ dropbtn.addEventListener('click', function(e) {
     e.stopPropagation(); 
     dropdown.classList.toggle('active');
 });
-
-profileIcon.addEventListener("click", () => {
-    const access = sessionStorage.getItem("test_access");
-
+dropdown.addEventListener('click', function(e) {
+    e.stopPropagation(); 
+});
 window.addEventListener('click', function() {
     dropdown.classList.remove('active');
 });
@@ -61,11 +60,3 @@ themeBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
     }
 });
-
-
-
-
-
-
-
-
