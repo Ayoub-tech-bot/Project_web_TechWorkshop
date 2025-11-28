@@ -1,3 +1,4 @@
+
 const welcomeTitle = document.getElementById("Welcome_H1");
 const username = localStorage.getItem("username");
 const action = localStorage.getItem("action");
@@ -52,3 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'translateY(0)';
     });
 });
+
+
+
+
+
+

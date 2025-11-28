@@ -1,4 +1,6 @@
+console.log('Navigation system loaded');
 
+// DOM Elements
 const dropbtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 
@@ -7,6 +9,8 @@ dropbtn.addEventListener('click', function(e) {
     dropdown.classList.toggle('active');
 });
 
+profileIcon.addEventListener("click", () => {
+    const access = sessionStorage.getItem("test_access");
 
 window.addEventListener('click', function() {
     dropdown.classList.remove('active');
@@ -57,3 +61,11 @@ themeBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
     }
 });
+
+
+
+
+
+
+
+

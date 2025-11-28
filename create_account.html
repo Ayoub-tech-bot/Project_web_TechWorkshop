@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="loader.css">
-    <title>Sign Up – Tech Workshop</title>
-  </head>
-  <body>
-    <header>
-      <table width="100%">
-        <tr>
-          <td>
-            <a href="index.html"
-              ><img src="pic_src/Ayoub_Logo-1.png" width="70" alt="logo"
-            /></a>
-          </td>
-          <td align="right">
-            <a href="index.html#Servixe">Service</a> |
-            <a href="index.html#About">About us</a> |
-            <a href="index.html#Contact">Contact </a>|
-            <a href="notification.html">
-              <img
-                src="pic_src/2199103_bell_alert_notification_ring_icon.png"
-                alt="Notifications"
-                width="20"
-                height="20"
-            /></a>
-          </td>
-        </tr>
-      </table>
-      <hr size="3" color="0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – Tech Workshop</title>
+  <link rel="stylesheet" href="style_create.css">
+  <link rel="stylesheet" href="loader.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+        </div>
       <div id="logoLoader" class="logo-loader">
-        <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
-      </div>
-    </header>
+          <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
+        </div>
+        <div class="nav-links">
+            <a href="index.html#Service">Service</a>
+            <a href="index.html#About">About us</a>
+            <a href="index.html#Contact">Contact</a>
+            <div class="nav-icons">
+                <img src="pic_src/115695_magnifying glass_zoom_find_search_icon.png" alt="search">
+                <a href="team.html"><img src="pic_src/1167978_coding_development_code_dev_programming_icon.png" alt="team"></a>
+                <a href="notification.html"><img src="pic_src/2199103_bell_alert_notification_ring_icon.png" alt="notification"></a>
+                <a href="create_account.html"><img src="pic_src/7853767_kashifarif_user_profile_person_account_icon.png" alt="profile"></a>
+            </div>
+        </div>
+    </nav>
+  <div class="bg"></div>
+  <main>
+  
+    <div class="container">
+        <div class="left">
+            <h1>Create Your Account</h1>
+            <p>Join our Tech Workshop community and start learning!</p>
 
-    <main>
-      <center>
-        <h1>Create Your Account</h1>
-        <p>Join our Tech Workshop community and start learning!</p>
+            <form id="FormCA" method="get" class="form">
+                <div class="input-box">
+                   <img src="pic_src/iconuser.png" class="icon">
+                   <input type="text" id="name" name="name"  placeholder="Full Name" required>
+                </div>
+                <div class="input-box">
+                   <img src="pic_src/iconemail.png" class="icon">
+                   <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                  <img src="pic_src/iconpassword.png" class="icon">
+                  <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                  <img src="pic_src/iconpassword.png" class="icon">
+                  <input type="password" id="confirm" name="confirm" placeholder="Confirm Password" required>
+                </div>
+                <div id="error" class="error-box"></div>
+                <br><br><br>
+                <button type="submit" id="create_acc">Sign Up</button>
+            </form>
+        </div>
+        <div class="right">
+            <div class="overlay"></div>
+            <div class="right-text">
+                <h2>Start your journey now</h2>
+                <p>If you don't have an account yet, join us and start your journey.</p>
+            </div>
+        </div>
 
-        <div id="error"></div>
-        <form action="/create_account.html" method="get" id="FormCA">
-          <table cellpadding="5" cellspacing="0">
-            <tr>
-              <td align="right"><label for="name">Full Name:</label></td>
-              <td><input type="text" id="name" name="name" req /></td>
-            </tr>
-            <tr>
-              <td align="right"><label for="email">Email:</label></td>
-              <td><input type="email" id="email" name="email" required /></td>
-            </tr>
-            <tr>
-              <td align="right"><label for="password">Password:</label></td>
-              <td>
-                <input type="password" id="password" name="password" required />
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                <label for="confirm">Confirm Password:</label>
-              </td>
-              <td>
-                <input type="password" id="confirm" name="confirm" required />
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center">
-                <button type="submit" id="create_acc">Create</button>
-              </td>
-            </tr>
-          </table>
-        </form>
-
-        <p>Already have an account? <a href="login.html">Log in here</a></p>
-      </center>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </main>
-    <hr size="3" color="0" />
-    <footer>
-      <strong> <center>@ALL RIGHTS RESERVED</center> </strong>
-    </footer>
-    <script src="create_account_sc.js"></script>
+    </div>
+</main>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html"><img src="pic_src/Ayoub_Logo-1.png" alt="logo"></a>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Tech Workshop. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+  <script src="create_account_sc.js"></script>
     <script src="loader.js"></script>
-  </body>
+</body>
 </html>
