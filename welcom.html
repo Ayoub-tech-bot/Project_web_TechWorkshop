@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Tech Workshop</title>
+    <link rel="stylesheet" href="welcomecss.css">
     <link rel="stylesheet" href="loader.css">
-    <title>Document</title>
 </head>
 <body>
-    <nav>
+  <nav>
         <div id="logoLoader" class="logo-loader">
          <img src="pic_src/Ayoub_Logo-1.png" alt="logo" />
         </div>  
     </nav>
-    <h1 id="Welcome_H1" align="center">Welcome to the community !</h1> 
-    <a href="index.html" align="center"><-- Go to the home page</a> 
-
-
-
-
-    <script src="welcom.js">
-
-    </script>
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <div class="welcome-icon">✓</div>
+            <h1 id="welcomeText">Welcome!</h1>
+            <p id="welcomeMessage">Great to have you here</p>
+            <button class="start-btn" onclick="window.location.href='index.html'">Get Started</button>
+        </div>
+    </div>
+    <script src="welcom.js"></script>
     <script src="loader.js"></script>
-    
 </body>
 </html>

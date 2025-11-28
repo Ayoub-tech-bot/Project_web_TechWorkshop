@@ -1,3 +1,6 @@
+// index.js - Fixed Authentication System for Tech Workshop
+
+// DOM Elements
 const dropbtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 
