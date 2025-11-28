@@ -9,6 +9,8 @@ dropbtn.addEventListener('click', function(e) {
     dropdown.classList.toggle('active');
 });
 
+profileIcon.addEventListener("click", () => {
+    const access = sessionStorage.getItem("test_access");
 
 window.addEventListener('click', function() {
     dropdown.classList.remove('active');

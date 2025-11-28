@@ -1,4 +1,4 @@
-                       /* --------  */
+
 const action = localStorage.getItem("action");
 const titlestrong = document.querySelector("#H2_reg strong").childNodes[0];
 const titlelink = document.querySelector('#H2_reg a');
@@ -123,9 +123,3 @@ openTerms.addEventListener("click", () => {
 closeTerms.addEventListener("click", () => {
     termsPopup.style.display = "none";
 });
-
-
-
-
-
-
