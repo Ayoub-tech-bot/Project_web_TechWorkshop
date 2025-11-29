@@ -19,7 +19,6 @@
 
 body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    color: var(--almost-black);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -244,7 +243,7 @@ tr:hover {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    min-width: 220px;
+    min-width: 190px;
     padding: 14px 30px;
     background: var(--white);
     border: 2px solid var(--primary-red);
@@ -325,32 +324,38 @@ hr {
     margin: 40px 0 20px;
 }
 
-footer {
-    background: linear-gradient(to right, var(--primary-red), var(--black));
-    color: var(--white);
+footer { 
+    background: linear-gradient(to right, var(--primary-red), var(--black)); 
+    color: var(--white); 
     padding: 15px 5%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0; 
+}
+.footer-content { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+.footer-logo img { 
+    height: 35px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+.copyright { 
+    margin-top: 10px; 
+    font-size: 0.8rem; 
+    opacity: 0.8; 
+    width: 100%; 
+    text-align: center; 
 
-.footer-logo img {
-    height: 35px;
-    border-radius: 10px;
 }
+footer p{
+    color: var(--white);
+    font-size: 0.75rem; 
+    margin-bottom: 7px;
 
-.copyright {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    opacity: 0.8;
-    width: 100%;
-    text-align: center;
 }
 
 @keyframes fadeInUp {
