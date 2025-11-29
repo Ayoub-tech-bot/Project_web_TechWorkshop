@@ -29,7 +29,7 @@ form.addEventListener('submit', (e) => {
     }
 
     if(password.value.length < 6){
-        messages.push("The paasword should be longer !");
+        messages.push("The password should be longer !");
         test = false;
     }
 
@@ -41,6 +41,7 @@ form.addEventListener('submit', (e) => {
 
     if(!test){
         e.preventDefault();
+        errorElement.style.display = "block";
         errorElement.innerText = messages.join("," + " ");
         return;
     }

@@ -28,46 +28,58 @@ a {
     transition: color 0.3s ease; 
 }
 a:hover { 
-    color: var(--primary-red);
+    color: var(--primary-red); 
 }
 
-nav {
+nav { 
     display: flex; 
     justify-content: space-between; 
-    align-items: center; padding: 12px 5%;
+    align-items: center; 
+    padding: 12px 5%; 
     background: linear-gradient(to right, var(--primary-red), var(--black)); 
-    color: var(--white);
+    color: var(--white); 
     position: sticky; 
     top: 0; 
     z-index: 100; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .nav-logo img { 
     height: 80px; 
     border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+.nav-logo img:hover { 
+    transform: scale(1.1); 
 }
 
 .nav-links { 
     display: flex; 
     align-items: center; 
     gap: 15px; 
+    margin-right: 30px; 
 }
-
 .nav-links a { 
     font-weight: 500; 
     padding: 5px 8px; 
     border-radius: 10px; 
     font-size: 0.9rem; 
 }
-
 .nav-links a:hover { 
     background-color: rgba(255, 255, 255, 0.1); 
 }
+
 .nav-icons { 
     display: flex; 
     align-items: center; 
-    gap: 10px; 
+    gap: 20px; }
+.nav-icons a { 
+    padding: 5px 8px; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease; 
+}
+.nav-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 .nav-icons img { 
     width: 16px; 
@@ -76,8 +88,8 @@ nav {
     border-radius: 5px; 
     transition: transform 0.3s ease; 
 }
-.nav-icons img:hover { 
-    transform: scale(1.1); 
+.nav-icons a:hover img { 
+    transform: scale(1.2); 
 }
 
 main {
@@ -236,26 +248,32 @@ button:hover {
 } 
 
 footer {
-    background: linear-gradient(to right, var(--primary-red), var(--black)); 
+    background: linear-gradient(to right, var(--primary-red), var(--black));
     color: var(--white);
-    padding: 30px 5%; 
-    margin-top: 60px;
+    padding: 15px 5%;
+    border-radius: 20px 20px 0 0;
 }
-.footer-content { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px; 
-    text-align: center; 
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.footer-logo img { 
-    height: 40px; 
-    border-radius: 10px; 
+
+.footer-logo img {
+    height: 35px;
+    border-radius: 10px;
 }
-.copyright { 
-    font-size: 0.9rem; 
-    opacity: 0.8; 
-} 
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+}
 
 @media (max-width: 900px) {
     nav { 
